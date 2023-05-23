@@ -12,7 +12,7 @@ namespace TraversalCoreProject.DataAccess.Concrete
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("server=LAPTOP-UROTH5AA;initial catalog=EasyCashDb;integrated Security=true");
+			optionsBuilder.UseSqlServer("server=LAPTOP-UROTH5AA;initial catalog=TraversalCoreDb;integrated Security=true");
 		}
 
 		public DbSet<Contact> Contacts { get; set; }
