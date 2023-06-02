@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Shared\Component\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TraversalCoreProject.Business\TraversalCoreProject.Business.csproj" />
     <ProjectReference Include="..\TraversalCoreProject.DataAccess\TraversalCoreProject.DataAccess.csproj" />
   </ItemGroup>

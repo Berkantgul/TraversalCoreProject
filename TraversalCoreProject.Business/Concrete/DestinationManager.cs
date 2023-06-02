@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TraversalCoreProject.Business.Abstract;
 using TraversalCoreProject.DataAccess.Abstract;
 using TraversalCoreProject.Entity.Concrete;
+using TraversalCoreProject.Entity.Dtos;
 
 namespace TraversalCoreProject.Business.Concrete
 {
@@ -36,6 +37,11 @@ namespace TraversalCoreProject.Business.Concrete
         public List<Destination> GetList()
         {
             return _destinationDal.GetList();
+        }
+
+        public TraversalStatisticDto StatisticCount()
+        {
+            return _destinationDal.StatisticCount();
         }
 
         public void Update(Destination entity)
