@@ -9,5 +9,6 @@ namespace TraversalCoreProject.Business.Abstract
 {
 	public interface IDestinationService : IGenericService<Destination>
 	{
+		
 	}
 }

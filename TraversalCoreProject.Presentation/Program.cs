@@ -1,7 +1,13 @@
+using TraversalCoreProject.Business.Abstract;
+using TraversalCoreProject.Business.Concrete;
+using TraversalCoreProject.DataAccess.Abstract;
+using TraversalCoreProject.DataAccess.Concrete.EntityFramework;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 

@@ -4,35 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TraversalCoreProject.Business.Abstract;
+using TraversalCoreProject.DataAccess.Abstract;
 using TraversalCoreProject.Entity.Concrete;
 
 namespace TraversalCoreProject.Business.Concrete
 {
-	public class DestinationManager : IDestinationService
-	{
-		public void Add(Destination entity)
-		{
-			throw new NotImplementedException();
-		}
+    public class DestinationManager : IDestinationService
+    {
+        private readonly IDestinationDal _destinationDal;
 
-		public void Delete(Destination entity)
-		{
-			throw new NotImplementedException();
-		}
+        public DestinationManager(IDestinationDal destinationDal)
+        {
+            _destinationDal = destinationDal;
+        }
 
-		public Destination GetById(int id)
-		{
-			throw new NotImplementedException();
-		}
+        public void Add(Destination entity)
+        {
+            throw new NotImplementedException();
+        }
 
-		public List<Destination> GetList()
-		{
-			throw new NotImplementedException();
-		}
+        public void Delete(Destination entity)
+        {
+            throw new NotImplementedException();
+        }
 
-		public void Update(Destination entity)
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public Destination GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Destination> GetList()
+        {
+            return _destinationDal.GetList();
+        }
+
+        public void Update(Destination entity)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

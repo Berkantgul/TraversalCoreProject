@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TraversalCoreProject.DataAccess\TraversalCoreProject.DataAccess.csproj" />
     <ProjectReference Include="..\TraversalCoreProject.Entity\TraversalCoreProject.Entity.csproj" />
   </ItemGroup>
 
