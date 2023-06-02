@@ -1,9 +1,19 @@
+
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using TraversalCoreProject.Business.Abstract;
 using TraversalCoreProject.Business.Concrete;
+using TraversalCoreProject.Business.DependencyResolves.Autofac;
 using TraversalCoreProject.DataAccess.Abstract;
 using TraversalCoreProject.DataAccess.Concrete.EntityFramework;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+// add dependecy injection
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterModule(new AutofacBusinessModule()));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

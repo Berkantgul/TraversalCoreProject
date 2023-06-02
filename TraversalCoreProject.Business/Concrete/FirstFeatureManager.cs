@@ -4,13 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TraversalCoreProject.Business.Abstract;
+using TraversalCoreProject.DataAccess.Abstract;
 using TraversalCoreProject.Entity.Concrete;
 
 namespace TraversalCoreProject.Business.Concrete
 {
 	public class FirstFeatureManager : IFirstFeatureService
 	{
-		public void Add(FirstFeature entity)
+		private readonly IFirstFeatureDal _firstFeatureDal;
+
+        public FirstFeatureManager(IFirstFeatureDal firstFeatureDal)
+        {
+            _firstFeatureDal = firstFeatureDal;
+        }
+
+        public void Add(FirstFeature entity)
 		{
 			throw new NotImplementedException();
 		}
@@ -27,7 +35,7 @@ namespace TraversalCoreProject.Business.Concrete
 
 		public List<FirstFeature> GetList()
 		{
-			throw new NotImplementedException();
+			return _firstFeatureDal.GetList();
 		}
 
 		public void Update(FirstFeature entity)

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -19,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TraversalCoreProject.Core\TraversalCoreProject.Core.csproj" />
     <ProjectReference Include="..\TraversalCoreProject.DataAccess\TraversalCoreProject.DataAccess.csproj" />
     <ProjectReference Include="..\TraversalCoreProject.Entity\TraversalCoreProject.Entity.csproj" />
   </ItemGroup>

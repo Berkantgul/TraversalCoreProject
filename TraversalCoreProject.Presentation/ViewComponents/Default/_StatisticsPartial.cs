@@ -7,7 +7,12 @@ namespace TraversalCoreProject.Presentation.ViewComponents.Default
 {
     public class _StatisticsPartial : ViewComponent
     {
-        DestinationManager _destinationManager = new DestinationManager(new EfDestinationDal());
+        private readonly IDestinationService _destinationManager;
+
+        public _StatisticsPartial(IDestinationService destinationManager)
+        {
+            _destinationManager = destinationManager;
+        }
         public IViewComponentResult Invoke()
         {
             var result = _destinationManager.StatisticCount();
