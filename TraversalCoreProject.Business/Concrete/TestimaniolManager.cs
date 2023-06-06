@@ -4,13 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TraversalCoreProject.Business.Abstract;
+using TraversalCoreProject.DataAccess.Abstract;
 using TraversalCoreProject.Entity.Concrete;
 
 namespace TraversalCoreProject.Business.Concrete
 {
 	public class TestimaniolManager : ITestimaniolService
 	{
-		public void Add(Testimaniol entity)
+		private readonly ITestimaniolDal _testimaniolDal;
+
+        public TestimaniolManager(ITestimaniolDal testimaniolDal)
+        {
+            _testimaniolDal = testimaniolDal;
+        }
+
+        public void Add(Testimaniol entity)
 		{
 			throw new NotImplementedException();
 		}
@@ -27,7 +35,7 @@ namespace TraversalCoreProject.Business.Concrete
 
 		public List<Testimaniol> GetList()
 		{
-			throw new NotImplementedException();
+			return _testimaniolDal.GetList();
 		}
 
 		public void Update(Testimaniol entity)

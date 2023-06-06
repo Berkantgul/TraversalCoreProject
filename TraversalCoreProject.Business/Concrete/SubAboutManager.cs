@@ -4,13 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TraversalCoreProject.Business.Abstract;
+using TraversalCoreProject.DataAccess.Abstract;
 using TraversalCoreProject.Entity.Concrete;
 
 namespace TraversalCoreProject.Business.Concrete
 {
 	public class SubAboutManager : ISubAboutService
 	{
-		public void Add(SubAbout entity)
+		private readonly ISubAboutDal _subAboutDal;
+
+        public SubAboutManager(ISubAboutDal subAboutDal)
+        {
+            _subAboutDal = subAboutDal;
+        }
+
+        public void Add(SubAbout entity)
 		{
 			throw new NotImplementedException();
 		}
@@ -27,7 +35,7 @@ namespace TraversalCoreProject.Business.Concrete
 
 		public List<SubAbout> GetList()
 		{
-			throw new NotImplementedException();
+			return _subAboutDal.GetList();
 		}
 
 		public void Update(SubAbout entity)
