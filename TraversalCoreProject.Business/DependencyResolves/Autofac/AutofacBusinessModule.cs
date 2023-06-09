@@ -48,6 +48,9 @@ namespace TraversalCoreProject.Business.DependencyResolves.Autofac
             builder.RegisterType<TestimaniolManager>().As<ITestimaniolService>();
             builder.RegisterType<EfTestimaniolDal>().As<ITestimaniolDal>();
 
+            builder.RegisterType<CommentManager>().As<ICommentService>();
+            builder.RegisterType<EfCommentDal>().As<ICommentDal>();
+
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()
                 .EnableClassInterceptors(new Castle.DynamicProxy.ProxyGenerationOptions()

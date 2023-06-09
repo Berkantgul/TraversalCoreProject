@@ -1,6 +1,10 @@
 
 using Autofac;
+using Autofac.Core;
 using Autofac.Extensions.DependencyInjection;
+using SmartBreadcrumbs.Extensions;
+using SmartBreadcrumbs.Attributes;
+using System.Reflection;
 using TraversalCoreProject.Business.Abstract;
 using TraversalCoreProject.Business.Concrete;
 using TraversalCoreProject.Business.DependencyResolves.Autofac;
@@ -15,11 +19,14 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterModule(new AutofacBusinessModule()));
 
 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -38,6 +45,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+	pattern: "{controller=Default}/{action=Index}/{id?}");
+
 
 app.Run();

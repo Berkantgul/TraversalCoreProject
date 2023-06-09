@@ -25,5 +25,6 @@ namespace TraversalCoreProject.DataAccess.Concrete
 		public DbSet<SecondFeature> SecondFeatures { get; set; }
 		public DbSet<SubAbout> SubAbouts { get; set; }
 		public DbSet<Testimaniol> Testimaniols { get; set; }
+		public DbSet<Comment> Comments { get; set; }
 	}
 }

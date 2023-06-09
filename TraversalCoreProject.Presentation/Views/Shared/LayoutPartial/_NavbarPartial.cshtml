@@ -1,4 +1,4 @@
-﻿ 
+﻿
 
 <header id="site-header" class="fixed-top">
     <div class="container">
@@ -17,19 +17,19 @@
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
                 <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-                
+
             </button>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    <li class="nav-item @Html.Raw(Context.Request.Path=="/Default/Index"?" active":" ")">
+                        <a class="nav-link" href="/Default/Index">Anasayfa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">Hakkımızda</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Rotalar</a>
+                    <li class="nav-item  @Html.Raw(Context.Request.Path=="/Destination/Index"?" active":" ")">
+                        <a class="nav-link" href="/Destination/Index">Rotalar</a>
                     </li>
 
                     <li class="nav-item">

@@ -13,5 +13,6 @@ namespace TraversalCoreProject.Business.Abstract
 		void Delete(T entity);
 		T GetById(int id);
 		List<T> GetList();
+
 	}
 }

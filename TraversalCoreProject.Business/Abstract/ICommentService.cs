@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TraversalCoreProject.Entity.Concrete;
+
+namespace TraversalCoreProject.Business.Abstract
+{
+    public interface ICommentService : IGenericService<Comment>
+    {
+        List<Comment> GetByDestinationId(int destinationId);
+    }
+}
